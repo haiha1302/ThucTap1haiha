@@ -1,0 +1,587 @@
+/*Import the fonts used*/
+@import url('https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,800&display=swap');
+/*Basic reset*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Custom properties*/
+:root {
+    --dark-color: #2d2c2c;
+    --purple-solid: #350a4f;
+    --purple-transparent: rgba(53, 10, 79, .7);
+    --purple-transparent-alt: rgba(53, 10, 79, .5);
+    --purple-light: #8f50fb;
+    --yellow-solid: #fa9e2c;
+    --gradient-color: linear-gradient(to right, var(--yellow-solid), var(--purple-light));
+    --gradient-color-alt: linear-gradient(to right, var(--purple-light), var(--yellow-solid));
+}
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+    /* transition: .5s; */
+}
+body{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1.6rem;
+    color: var(--dark-color);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+section{
+    padding: 5rem 0;
+}
+hr{
+    width: 50%;
+    margin: 20px auto;
+}
+/*REUSABLE*/
+.btn{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: .5rem 3.5rem;
+    border: none;
+    border-radius: 10rem;
+    display: inline-block;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    max-width: 120rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+.form-btn{
+    margin-top: 5rem;
+    cursor: pointer;
+}
+
+.btn-gradient{
+    background-image: var(--gradient-color);
+}
+
+.btn-gradient:hover{
+    background-image: var(--gradient-color-alt);
+}
+
+.btn-purple{
+    
+    background-color: var(--purple-solid);
+}
+
+.btn-purple:hover{
+    background-color: #56247f;
+}
+
+.dots{
+    font-size: 2.4rem;
+    margin-left: .5rem;
+    opacity: .75;
+}
+/*HEADER*/
+.header{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--purple-transparent);
+    z-index: 999;
+    transition: background-color .5s, height .5s;
+}
+.header.active{
+    background-color: var(--purple-solid);
+}
+/* NAV */
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img{
+    max-width: 16%;
+}
+.logo p{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.hamburger-menu{
+    font-size: 2.6rem;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 1500;
+}
+
+.hamburger-menu .fa-times{
+    display: none;
+}
+
+.menu-open .hamburger-menu .fa-times{
+    display: block;
+}
+.menu-open .hamburger-menu .fa-bars{
+    display: none;
+}
+
+.nav-list{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: var(--purple-solid);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1400;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .5s;
+}
+
+.menu-open .nav-list{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.nav-item:not(:last-child){
+    margin-bottom: .5rem;
+}
+
+.nav-link{
+    display: block;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1rem;
+}
+/* BOOKING */
+.section-head{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.heading{
+    display: block;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.sub-heading{
+    font-size: 1.7rem;
+    font-family:'Courgette',cursive ;
+    font-weight: 300;
+    color: #a5a5a5;
+}
+
+.input-group{
+    margin-bottom: 1.5rem;
+}
+
+.input-label{
+    display: block;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.input,
+.option{
+    outline: none;
+    border: none;
+    width: 100%;
+    min-height: 4rem;
+    padding: 1rem;
+    font-weight: bold;
+    color: #a5a5a5;
+    letter-spacing: 2px;
+    font-family: 'Open Sans',sans-serif;
+    resize: none;
+}
+
+::placeholder{
+    color: inherit;
+}
+
+/* BOOK */
+
+.book-content{
+    display: flex;
+    grid-gap: 2.5rem;
+}
+
+.book-form1{
+    width: 65%;
+    height: 50%;
+    background-image: var(--gradient-color);
+    padding: 2.5rem;
+}
+
+.book-form1 .input{
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    font-weight: normal;
+    border-bottom: 2px solid #fff;
+    padding-left: 5;
+}
+
+.book-form2{
+    width: 35%;
+    background-image: var(--gradient-color);
+    padding: 2.5rem;
+}
+
+.name-info{
+    display: flex;
+}
+h3{
+    margin: 10px;
+}
+.fa-building{
+    width: 5rem;
+    font-size: 3rem;
+}
+
+.date{
+    margin-top: 5rem;
+}
+
+.check{
+    display: flex;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Courgette',cursive;
+    margin-top: 2.5rem;
+}
+
+.date-check1{
+    color: #fff;
+    padding-left: 9.5rem;
+}
+
+.date-check2{
+    color: #fff;
+    padding-left: 8rem;
+}
+
+.number{
+    display: flex;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Courgette',cursive;
+    padding-top: 3rem;
+}
+
+.number-customer{
+    color: #fff;
+    padding-left: 2.5rem;
+}
+
+.book-img{
+    display: flex;
+    width: 50%;
+    padding-top: 4rem;
+}
+.book-img img{
+    width: 100%;
+}
+
+.icon{
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.eat{
+    display: flex;
+}
+
+.wifi{
+    display: flex;
+    padding-top: 1rem;
+}
+
+.name-icon1{
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Courgette',cursive;
+    color: #fff;
+}
+
+.name-icon2{
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Courgette',cursive;
+    color: #fff;
+}
+
+.bar{
+    display: block;
+    position: relative;
+}
+
+.bar::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--purple-light);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s;
+}
+
+.book-form1 .input:focus + .bar::after{
+    transform: scaleX(1);
+}
+
+/* FOOTER */
+
+.footer{
+    padding: 5rem 0;
+    background-color: var(--purple-solid);
+    color: #fff;
+}
+
+.footer-content-brand{
+    margin-bottom: 5rem;
+}
+
+.footer .paragraph{
+    color: inherit;
+}
+
+.footer-heading{
+    text-transform: uppercase;
+    margin-bottom: 2.5rem
+}
+
+.social-media{
+    display: flex;
+}
+
+.sm-link{
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    border: 2px solid var(--yellow-solid);
+    border-radius: 50%;
+    display: flex;
+    margin-right: 1rem;
+    transition: background-color .5s;
+}
+
+.sm-link:hover{
+    background-color: var(--yellow-solid);
+    color: var(--dark-color);
+}
+
+.sm-link i{
+    margin: auto;
+}
+
+/* MEDIA SQUERIES */
+
+@media screen  and (min-width:768px){
+    
+
+    /* FOOTER */
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer .paragraph{
+        margin-top: 2.5rem;
+    }
+    .footer-heading{
+        margin-bottom: 5rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    section:not(.booking){
+        padding: 10rem 0;
+    }
+
+    /* HEADER */
+    .hamburger-menu{
+        display: none;
+    }
+    .nav-list{
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        flex-direction: row;
+        justify-content: initial;
+        opacity: 1;
+        transform: scale(1);
+    }
+    .nav-item:not(:last-child){
+        margin-right: 3rem;
+        margin-bottom: 0;
+    }
+    .nav-link{
+        font-size: 1.3rem;
+        font-weight: normal;
+        transition: color .5s;
+    }
+    .nav-link:hover{
+        color: var(--yellow-solid);
+    }
+
+    .input,
+    .options{
+        min-width: 10rem;
+        min-height: 4rem;
+    }
+}
+
+/* .confirm-booking{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    
+    top: 0;
+    background-color:black;
+    opacity: 0.8;
+    display: none;
+} */
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    height: 200px;
+    
+    
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.head{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head .head-text{
+    font-size: 2rem;
+    font-family:'Courgette',cursive ;
+    font-weight: bold;
+}
+
+.head .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.sub{
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 3rem;
+    text-align: center
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* .test{
+    width: 500px;
+    height: 200px;
+    position: fixed;
+    opacity: 1;
+    border-radius: 8px;
+    
+    background-color:white;
+    z-index: 10;
+}
+.head-text{
+    font-size: 2rem;
+    font-family:'Courgette',cursive ;
+    font-weight: 300;
+    color: var(--dark-color);
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sub-text{
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 3rem;
+    text-align: center
+}
+
+.head-text .close{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 3rem;
+    font-weight: bold;
+} */
+

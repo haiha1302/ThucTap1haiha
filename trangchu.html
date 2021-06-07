@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="trangchu.css">
+    <link rel="shortcut icon" href="image/favicon.png" type="image/png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- Hiệu ứng chuyển danh sách ks -->
+    <title>COLOURS - Website đặt phòng khách sạn giá rẻ</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="trangchu.html" class="logo">
+                    <img src="image/colours_logo1.jpg" alt="">
+                </a>
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars open-state"></i>
+                    <i class="fas fa-times close-state"></i>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#heros" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#abouts" class="nav-link">About</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a href="#offers" class="nav-link">Offers</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="#" class="nav-link">News</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a href="#contacts" class="nav-link">Contact</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="login/login.html" class="sm-link"><i class="fas fa-user-circle"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <h5>thedat</h5>
+                    </li> -->
+                    <div class="user" id="nameId">
+                        <a href="login/login.html" class="sm-link"><i class="fas fa-user-circle"></i></a>
+                        <h5 class="userName"></h5>
+                    </div>
+                    <div class="logout">
+                        <a href="#" id="clear-local">Log Out</a>
+                    </div>
+
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero" id="heros">
+            <div class="load"></div>
+            <div class="container">
+                <div class="main-heading">
+                    <h1 class="title" data-aos="fade-zoom-in" data-aos-duration="3000">Discover</h1>
+                    <h2 class="subtitle" data-aos="fade-right" data-aos-duration="2000">Luxury hotels</h2>
+                </div>
+                <a href="#hotel" class="btn btn-gradient" data-aos="fade-left" data-aos-duration="2000">Explore now
+                    <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                </a>
+            </div>
+        </div>
+
+        <section class="booking">
+            <div class="container">
+                <form action="" class="book-form">
+                    <div class="input-group">
+                        <label for="destination" class="input-label">Destination</label>
+                        <input type="text" class="input" id="destination">
+                    </div>
+                    <div class="input-group">
+                        <label for="check-in" class="input-label">Check in</label>
+                        <input type="date" class="input" id="check-in">
+                    </div>
+                    <div class="input-group">
+                        <label for="check-out" class="input-label">Check out</label>
+                        <input type="date" class="input" id="check-out">
+                    </div>
+                    <div class="input-group">
+                        <label for="adults" class="input-label">Adults</label>
+                        <select name="" id="adults" class="options">
+                            <option value="0">0</option>
+                            <option value="0">1</option>
+                            <option value="0">2</option>
+                            <option value="0">3</option>
+                            <option value="0">4</option>
+                            <option value="0">5</option>
+
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="children" class="input-label">Children</label>
+                        <select name="" id="children" class="options">
+                            <option value="0">0</option>
+                            <option value="0">1</option>
+                            <option value="0">2</option>
+                            <option value="0">3</option>
+                            <option value="0">4</option>
+                            <option value="0">5</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn form-btn btn-purple" id="search">Search
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="hotels" id="hotel">
+            <div class="container">
+                <h5 class="section-head">
+                    <span class="heading" data-aos="fade-down" data-aos-anchor-placement="top-bottom"
+                        data-aos-duration="3000">Explore</span>
+                    <span class="sub-heading" data-aos="fade-up" data-aos-duration="3000">Our beautiful hotels</span>
+                </h5>
+                <div id='grid' class="grid">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="offer" id="offers">
+            <div class="container">
+                <div class="offer-content">
+                    <div class="discount">
+                        40% off
+                    </div>
+                    <h5 class="hotel-name">The Paradise Hotel</h5>
+                    <div class="hotel-rating">
+                        <i class="fas fa-star rating"></i>
+                        <i class="fas fa-star rating"></i>
+                        <i class="fas fa-star rating"></i>
+                        <i class="fas fa-star rating"></i>
+                        <i class="fas fa-star-half rating"></i>
+                    </div>
+                    <p class="paragraph">
+                        Dịch vụ khách sạn chất lượng 5 sao với cách phục vụ chuyên nghiệp của nhân viên được đào tạo theo tiêu chuẩn Châu Âu. Đảm bảo mang đến cho bạn trải nghiệm đẳng cấp. Đặc biệt offer mùa covid giảm trực tiếp 40% vào giá thuê.
+                    </p>
+                    <a href="login/loginoffer.html" class="btn btn-gradient">Offer
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="rooms">
+            <div class="container">
+                <h5 class="section-head">
+                    <span class="heading" data-aos="zoom-in" data-aos-duration="3000">Luxurious</span>
+                    <span class="sub-heading">Affordable rooms</span>
+                </h5>
+                <div id="book" class="grid rooms-grid">
+                    <!-- <div class="grid-item featured-rooms" data-aos="fade-down-right" data-aos-duration="2000">
+                        <div class="image-wrap">
+                            <img class="room-image" src="image/room_1.jpg" alt="">
+                            <h5 class="room-name">Astro Hotel</h5>
+                        </div>
+                        <div class="room-info-wrap">
+                            <span class="room-price">$200 <span class="per-night">Per night</span> </span>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo temporibus tempore qui
+                                aperiam, perferendis quibusdam eius, sunt provident vel pariatur dolore unde,
+                                necessitatibus quaerat. Temporibus rerum earum corporis a quisquam!
+                            </p>
+                            <a  class="btn rooms-btn bookRoom" id="rooms">Book now &rrarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="grid-item featured-rooms" data-aos="fade-down" data-aos-duration="2000">
+                        <div class="image-wrap">
+                            <img class="room-image" src="image/room_2.jpg" alt="">
+                            <h5 class="room-name">Astro Hotel</h5>
+                        </div>
+                        <div class="room-info-wrap">
+                            <span class="room-price">$250 <span class="per-night">Per night</span> </span>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo temporibus tempore qui
+                                aperiam, perferendis quibusdam eius, sunt provident vel pariatur dolore unde,
+                                necessitatibus quaerat. Temporibus rerum earum corporis a quisquam!
+                            </p>
+                            <a  class="btn rooms-btn bookRoom" id="rooms">Book now &rrarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="grid-item featured-rooms" data-aos="fade-down-left" data-aos-duration="2000">
+                        <div class="image-wrap">
+                            <img class="room-image" src="image/room_3.jpg" alt="">
+                            <h5 class="room-name">Astro Hotel</h5>
+                        </div>
+                        <div class="room-info-wrap">
+                            <span class="room-price">$300 <span class="per-night">Per night</span> </span>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo temporibus tempore qui
+                                aperiam, perferendis quibusdam eius, sunt provident vel pariatur dolore unde,
+                                necessitatibus quaerat. Temporibus rerum earum corporis a quisquam!
+                            </p>
+                            <a  class="btn rooms-btn bookRoom" id="rooms">Book now &rrarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="grid-item featured-rooms" data-aos="fade-right" data-aos-duration="2000">
+                        <div class="image-wrap">
+                            <img class="room-image" src="image/room_4.jpg" alt="">
+                            <h5 class="room-name">Enchanred Garden</h5>
+                        </div>
+                        <div class="room-info-wrap">
+                            <span class="room-price">$200 <span class="per-night">Per night</span> </span>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo temporibus tempore qui
+                                aperiam, perferendis quibusdam eius, sunt provident vel pariatur dolore unde,
+                                necessitatibus quaerat. Temporibus rerum earum corporis a quisquam!
+                            </p>
+                            <a  class="btn rooms-btn bookRoom" id="rooms">Book now &rrarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="grid-item featured-rooms" data-aos="zoom-in" data-aos-duration="2000">
+                        <div class="image-wrap">
+                            <img class="room-image" src="image/room_5.jpg" alt="">
+                            <h5 class="room-name">Enchanred Garden</h5>
+                        </div>
+                        <div class="room-info-wrap">
+                            <span class="room-price">$250 <span class="per-night">Per night</span> </span>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo temporibus tempore qui
+                                aperiam, perferendis quibusdam eius, sunt provident vel pariatur dolore unde,
+                                necessitatibus quaerat. Temporibus rerum earum corporis a quisquam!
+                            </p>
+                            <a  class="btn rooms-btn bookRoom" id="rooms">Book now &rrarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="grid-item featured-rooms" data-aos="fade-left" data-aos-duration="2000">
+                        <div class="image-wrap">
+                            <img class="room-image" src="image/room_6.jpg" alt="">
+                            <h5 class="room-name">Enchanred Garden</h5>
+                        </div>
+                        <div class="room-info-wrap">
+                            <span class="room-price">$300 <span class="per-night">Per night</span> </span>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo temporibus tempore qui
+                                aperiam, perferendis quibusdam eius, sunt provident vel pariatur dolore unde,
+                                necessitatibus quaerat. Temporibus rerum earum corporis a quisquam!
+                            </p>
+                            <a class="btn rooms-btn bookRoom" id="rooms">Book now &rrarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="grid-item featured-rooms" data-aos="fade-up-right" data-aos-duration="2000">
+                        <div class="image-wrap">
+                            <img class="room-image" src="image/room_7.jpg" alt="">
+                            <h5 class="room-name">The Paradise Hotel</h5>
+                        </div>
+                        <div class="room-info-wrap">
+                            <span class="room-price">$200 <span class="per-night">Per night</span> </span>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo temporibus tempore qui
+                                aperiam, perferendis quibusdam eius, sunt provident vel pariatur dolore unde,
+                                necessitatibus quaerat. Temporibus rerum earum corporis a quisquam!
+                            </p>
+                            <a class="btn rooms-btn bookRoom" id="rooms">Book now &rrarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="grid-item featured-rooms" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="image-wrap">
+                            <img class="room-image" src="image/room_8.jpg" alt="">
+                            <h5 class="room-name">The Paradise Hotel</h5>
+                        </div>
+                        <div class="room-info-wrap">
+                            <span class="room-price">$250 <span class="per-night">Per night</span> </span>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo temporibus tempore qui
+                                aperiam, perferendis quibusdam eius, sunt provident vel pariatur dolore unde,
+                                necessitatibus quaerat. Temporibus rerum earum corporis a quisquam!
+                            </p>
+                            <a  class="btn rooms-btn bookRoom" id="rooms">Book now &rrarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="grid-item featured-rooms" data-aos="fade-up-left" data-aos-duration="2000">
+                        <div class="image-wrap">
+                            <img class="room-image" src="image/room_9.jpg" alt="">
+                            <h5 class="room-name">The Paradise Hotel</h5>
+                        </div>
+                        <div class="room-info-wrap">
+                            <span class="room-price">$300 <span class="per-night">Per night</span> </span>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo temporibus tempore qui
+                                aperiam, perferendis quibusdam eius, sunt provident vel pariatur dolore unde,
+                                necessitatibus quaerat. Temporibus rerum earum corporis a quisquam!
+                            </p>
+                            <a  class="btn rooms-btn bookRoom" id="rooms">Book now &rrarr;</a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contacts">
+            <div class="container">
+                <h5 class="section-head">
+                    <span class="heading" data-aos="fade-up" data-aos-duration="2000"
+                        data-aos-anchor-placement="bottom-bottom">Contact</span>
+                    <span class="sub-heading">Get in touch witch us</span>
+                </h5>
+                <div class="contact-content">
+                    <div class="traveler-wrap">
+                        <img src="image/traveler2.png" alt="">
+                    </div>
+                    <form action="javascript:sendMail()" class="form contact-form" method="POST">
+                        <div class="input-group-wrap">
+                            <div class="input-group">
+                                <input type="text" class="input" placeholder="Name" id="name">
+                                <span class="bar"></span>
+                            </div>
+
+                            <div class="input-group">
+                                <input type="email" class="input" placeholder="Email" id="email">
+                                <span class="bar"></span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="input" placeholder="Subject" id="subject">
+                            <span class="bar"></span>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea class="input" cols="30" rows="15" placeholder="Message" id="message"
+                                required></textarea>
+                            <span class="bar"></span>
+                        </div>
+
+                        <button type="submit" class="btn form-btn btn-purple" onclick="sendEmail()" id="submitBtn">Send
+                            Message
+                            <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <audio controls class="music">
+        <!-- autoplay -->
+        <source src="image/Doing Just Fine.mp3">
+    </audio>
+    <footer class="footer" id="abouts">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-content-brand">
+                    <a href="trangchu.html" class="logo">
+                        <img src="image/colours_logo1.jpg" alt="" class="logo-image">
+                    </a>
+                    <div class="paragraph">
+                        Chúng tôi hợp tác với các chuỗi khách sạn trên toàn thế giới để bảo đảm mang lại kỳ nghỉ tuyệt
+                        vời nhất tại mọi điểm đến trong mơ của bạn!
+                        <br>
+                        Đội ngũ nhân viên hỗ trợ khách hàng luôn sẵn sàng giúp đỡ bạn trong từng bước của quá trình đặt vé
+                    </div>
+                </div>
+                <div class="social-media-wrap">
+                    <h4 class="footer-heading">Follow us</h4>
+                    <div class="social-media">
+                        <a href="#" class="sm-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v10.0'
+          });
+        };
+
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+      <!-- Your Plugin chat code -->
+      <div class="fb-customerchat"
+        attribution="biz_inbox"
+        page_id="103168455170532">
+      </div>
+
+    <script src="data/dataDiscount.js"></script>
+    <script src="data/dataUser.js"></script>
+    <script src="data/dataKS.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- Hiệu ứng chuyển danh sách ks-->
+    <script>
+        AOS.init();
+    </script>
+    <script src="trangchu.js"></script>
+    <script src="login/login.js"></script>
+</body>
+
+</html>

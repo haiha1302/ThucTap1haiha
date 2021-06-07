@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    display: flex;
+    background: linear-gradient(#b4ff001f, #00f3ff36);
+    padding: 20px 100px;
+}
+
+.logo {
+    width: 10%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    position: relative;
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+nav ul li a i {
+    margin-right: 10px;
+}
+
+nav ul li a span {
+    left: 50px;
+    position: absolute;
+    margin-left: 5px;
+    top: -7px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+    padding-bottom: 22px;
+    background: white;
+}
+
+.search {
+    position: relative;
+    margin: 20px;
+    text-align: center;
+}
+
+.search input {
+    position: relative;
+    width: 30%;
+    padding: 13px 20px;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 10px 0 #a5a4a487;
+    font-size: 1.2em;
+}
+
+.search i {
+    position: absolute;
+    right: 37%;
+    top: 15%;
+    font-size: 1.8em;
+}
+
+.container-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container-content .row {
+    margin-right: 20px;
+    width: 280px;
+}
+
+.row .image {
+    position: relative;
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+}
+
+.row .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.row .image span {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: -15px;
+    right: -40px;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+.row .image span i {
+    position: absolute;
+    font-size: 25px;
+    top: 10px;
+    left: 10px;
+}
+
+.row .image:hover span {
+    background-color: blanchedalmond;
+    transform: translate(-30px, -10px);
+}
+
+.row .title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/*cartBox*/
+
+.products-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    transition: 0.3s linear;
+    transform: scale(0);
+}
+
+.products-container.active {
+    transform: scale(1);
+}
+
+.content {
+    position: relative;
+    height: 70%;
+    width: 80%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-container i {
+    position: absolute;
+    right: 10%;
+    top: 15%;
+    background: #f00;
+    padding: 10px 15px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.product-header {
+    display: flex;
+    font-size: 20px;
+    margin: 20px 0 0;
+    border: 1px solid black;
+}
+
+.product-header h5 {
+    width: 80px;
+    border-right: 1px solid black;
+    text-align: center;
+}
+
+.product-header .clear-cart {
+    width: 80px;
+    border-right: 1px solid black;
+    text-align: center;
+}
+
+.products .col {
+    width: 402px;
+    display: flex;
+    border: 1px solid black;
+    border-top: none;
+}
+
+.products .col>div {
+    width: 80px;
+    text-align: center;
+    border-right: 1px solid black;
+    padding: 10px 0;
+}
+
+.products .col button {
+    outline: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: rgb(235, 48, 48);
+    color: #fff;
+    padding: 5px 15px;
+}
+
+.totalcost {
+    width: 402px;
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+}
+
+.totalcost h4:nth-child(1) {
+    border-right: 1px solid black;
+    right: 50%;
+    position: absolute;
+    padding-right: 50px;
+}
+
+.totalcost h4:nth-child(2) {
+    padding-left: 150px;
+}

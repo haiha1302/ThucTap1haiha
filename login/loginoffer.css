@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,800&display=swap');
+/*Basic reset*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Custom properties*/
+:root {
+    --dark-color: #2d2c2c;
+    --purple-solid: #350a4f;
+    --purple-transparent: rgba(53, 10, 79, .7);
+    --purple-transparent-alt: rgba(53, 10, 79, .5);
+    --purple-light: #8f50fb;
+    --yellow-solid: #fa9e2c;
+    --gradient-color: linear-gradient(to right, var(--yellow-solid), var(--purple-light));
+    --gradient-color-alt: linear-gradient(to right, var(--purple-light), var(--yellow-solid));
+}
+html{
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(background.jpg);
+    -webkit-backgound-size : cover;
+    background-size: cover;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+
+}
+
+
+.wrapper {
+    width: 400px;
+    height: 420px;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    padding: 60px 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    box-shadow: 8px 8px 50px rgb(240, 240, 240);
+    border-radius: 2rem;
+}
+
+
+
+h1{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 8%;
+    font-family: 'Courier New', Courier, monospace ;
+}
+
+.wrapper input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.wrapper input[type=text], .wrapper input[type=password]{
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    font-size: 16px;
+    opacity: 1;
+    color: #ccc;
+}
+
+.wrapper input[type=submit]{
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 40px;
+    background: var(--gradient-color);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10rem;
+    
+}
+
+.wrapper input[value=LOGIN] {
+    margin-left: 25%;
+}
+
+.wrapper input[type=submit]:hover{
+    cursor: pointer;
+    
+}
+
+.wrapper input::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.wrapper a{
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    opacity: 0.8;
+}
+
+.wrapper a :hover {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+}
+
+.bottom-text {
+    color: rgb(231, 223, 223);
+}
+
+.bottom-text input{
+    width: 10%;
+    float: left;
+}
+
+.bottom-text a {
+    float: right;
+}
+
+/* .socials {
+    margin-top: 12%;
+    text-align: center;
+} */
+
+/* .socials a{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+} */
+
+#overlay-area {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -5;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}
